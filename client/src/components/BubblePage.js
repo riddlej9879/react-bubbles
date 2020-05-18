@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // import axios from "axios";
 
 import { axiosWithAuth } from '../utils/axiosWithAuth'
@@ -11,12 +11,12 @@ const BubblePage = () => {
   // fetch your colors data from the server when the component mounts
   // set that data to the colorList state property
 
-  // axiosWithAuth()
-  //   .get('/colors')
-  //   .then(res => setColorList(res.data))
-  //   .catch(err => console.log('Error retrieving data: ', err))
+  axiosWithAuth()
+    .get('/colors')
+    .then(res => setColorList(res.data))
+    .catch(err => console.log('Error retrieving data: ', err))
 
-    // console.log(colorList)
+    console.log(colorList)
     
   return (
     <>
